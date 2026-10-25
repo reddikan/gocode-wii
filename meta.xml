@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>GO CODE</name>
+  <coder>Claude</coder>
+  <version>1.0</version>
+  <release_date>20261025000000</release_date>
+  <short_description>Pixel-art squad tactics: plan, stack, breach (Classic Controller)</short_description>
+  <long_description>Lead a four-operator hostage rescue team through ten night missions. Plan each operator's route on the floor plan, stack them on the doors, then call the GO code: charges blow, flashbangs pop, and the team storms in.
+
+VEGA (point, flashbangs), KNOX (breacher, charges), PIKE (recon, drone, silenced SMG) and MAE (medic, smoke, revives).
+
+Progress saves to the SD card after every mission.
+
+Controls (Classic Controller):
+Planning: stick/D-pad cursor, A waypoint, B undo, Y wait for GO, X ability, ZL/ZR operator, + start
+Assault: X GO code, ZL/ZR select, left stick take control (right stick aims), A back to plan, Y ability now, R replan, L camera, + pause
+-: 16:9 / 4:3 screen
+HOME: exit</long_description>
+</app>
