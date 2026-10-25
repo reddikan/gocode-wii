@@ -234,7 +234,7 @@ static void play_sfx(int id, int pitch, float pan, float vol)
     s32 v = -1;
     for (s32 k = FIRST_SFX_VOICE; k < 16; k++) if (ASND_StatusVoice(k) == SND_UNUSED) { v = k; break; }
     if (v < 0) return;
-    float base = (float)audio_volume(id) * (vol > 1.0f ? 1.0f : vol);
+    float base = (float)audio_volume(id) * (vol > 1.0f ? 1.0f : vol) * 0.72f;   /* master: headroom for breaches + gunfire */
     int vl = (int)(base * (pan > 0 ? 1.0f - pan * 0.7f : 1.0f));
     int vr = (int)(base * (pan < 0 ? 1.0f + pan * 0.7f : 1.0f));
     s32 rate = SFX_RATE * pitch / 128;
@@ -351,7 +351,7 @@ int main(int argc, char **argv)
         float mv[MUS_TRACKS];
         game_music(game, mv);
         for (int t = 0; t < MUS_TRACKS; t++) {
-            int v = (int)(mv[t] * (float)music_volume(t));
+            int v = (int)(mv[t] * (float)music_volume(t) * 0.85f);
             ASND_ChangeVolumeVoice(t, v, v);
         }
 
